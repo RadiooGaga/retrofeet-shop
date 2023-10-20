@@ -1,56 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Retrofeetshop</title>
-</head>
+  </head>
 
-<body>
-
-    <header class="header-container">
-        <img src="./assets/retrofeet-logo-sin.png" class="logo" alt="retrofeet-logo">
-                   
-        <div class="intro" id="brand">
+  <body>
+    <header>
+        <div class="logo">
+            <img src="./assets/retrofeet-logo-sin.png" alt="retrofeet-logo" width="120px" height="70px"/>
             <h1>RETROFEET</h1>
-            <h2>"SIEMPRE A TUS PIES"</h2>
-            <br>
-            <p>¡Viaja en el tiempo con estilo!</p>
         </div>
-
-        <video autoplay loop muted>
-            <source src="./assets/retro-feet-gif.mp4" type="video/mp4">
-        </video>
+        <div class="intro" id="brand">
+            
+            <h2>"SIEMPRE A TUS PIES"</h2>
+         </div>
+        <nav class="nav-bar">
+            <div class="menu1"><a href="#">SHOP</a></div>
+            <div class="menu2"><a href="#">NOVEDADES</a></div>
+            <div class="menu3"><a href="#">KIDS</a></div>
+            <div class="menu4"><a href="#">OFERTAS</a></div>
+            <div class="menu5"><a href="#">MI CUENTA</a></div>
+        </nav>
+      
     </header>
 
 <main>
-    <nav class="nav-bar">
-         <div class="menu-container">
-                <a href="#" class="menu1">SHOP</a> 
-                <a href="#" class="menu2">LOS FAVORITOS</a> 
-                <a href="#" class="menu3">RETRO KIDS</a> 
-                <a href="#" class="menu1">OFERTAS</a> 
-         </div>   
-    </nav>  
-
+          
     <section class="favorites">
+        <h3>TOP VENTAS</h3>
         <div class="favorites-container">
-            <img class="item1" src="./assets/adidas/gazelle-white.png" alt="" width="300px" height="300px">
-            <img class="item2" src="./assets/etonic/Etonic-trans-slam-low-1980.jpeg" alt="" width="300px" height="300px">
-            <img class="item3" src="./assets/nike/AirJordan-1-mostaza.jpg" alt="" width="300px" height="300px">
-            <img class="item4" src="./assets/reebok/reebok-road-racing-80.jpeg" alt="" width="300px" height="300px">
-            <img class="item5" src="./assets/nike/AirJordan-1-mostaza.jpg" alt="" width="300px" height="300px">
+
+            <div><img
+            class="item1"
+            src="./assets/etonic/Etonic-trans-slam-low-1980.jpeg"
+            alt=""
+            width="200px"
+            height="200px"
+          /></div>
+          <div><img
+            class="item2"
+            src="./assets/dunlop/dunlop-green-flash.jpeg"
+            alt=""
+            width="200px"
+            height="200px"
+          /></div>
+          <div><img
+            class="item3"
+            src="./assets/gola/gola-classic.jpeg"
+            alt=""
+            width="200px"
+            height="200px"
+          /></div>
+
+          <div><img
+            class="item4"
+            src="./assets/reebok/reebok-the-aztek-80.jpeg"
+            alt=""
+            width="200px"
+            height="200px"
+          /></div>
+          
         </div>
-
-
     </section>
-     
+    <section class="advertising">
+    <div class="advertising-gallery">
+            
+    <div class="poster1"><img src="./assets/advertising/reebok-road-racing.jpeg" alt="reebok-advertising" width="220px" height="320px"></div> 
+    <div class="poster2"><img src="./assets/advertising/bata-advertising.jpeg" alt="reebok-advertising" width="220px" height="320px"></div> 
+    <div class="poster3"><img src="./assets/advertising/converse-advertising 2.jpeg" alt="reebok-advertising" width="220px" height="320px"></div> 
+    <div class="poster4"><img src="./assets/advertising/converse-advertising.jpeg" alt="reebok-advertising" width="220px" height="320px"></div> 
+    <div class="poster5"><img src="./assets/advertising/etonic-advertising.jpeg" alt="reebok-advertising" width="220px" height="320px"></div> 
+          
+    </section>
+
+    <section class="essencials">
+        <h3>BLACK & WHITE ESSENCIALS</h3>
+        <div class="essencials-container">
+        <div><img class="item1" src="./assets/puma/puma-suede.jpeg" alt="" width="200px" height="200px"/></div>
+        <div><img class="item2" src="./assets/converse/converse-star.jpeg" alt="" width="200px" height="200px"/></div>
+        <div><img class="item3" src="./assets/vans/vans-old-skool-black.jpeg" alt="" width="200px" height="200px"/></div>
+        <div><img class="item4" src="./assets/adidas/adidas-superstar.jpg" alt="" width="200px" height="200px"/></div>
+        
+          
+        </div>
+    </section>
+    <section class="style">
+    <div class="style-gallery">
+            
+    <div class="style1"><img src="./assets/style/gazelle-blue-style.png" alt="reebok-advertising" width="220px" height="320px"></div> 
+    <div class="style2"><img src="./assets/style/diadora-b-elite-green.jpeg" alt="reebok-advertising" width="220px" height="320px"></div> 
+    <div class="style3"><img src="./assets/style/elite-gold.jpeg" alt="reebok-advertising" width="220px" height="320px"></div> 
+    <div class="style4"><img src="./assets/style/jamiroquai-collection.jpeg" alt="reebok-advertising" width="220px" height="320px"></div> 
+    <div class="style5"><img src="./assets/style/puma-boris-1980.jpeg" alt="reebok-advertising" width="220px" height="320px"></div> 
+          
+    </section>
 
 
+    <!--<video autoplay loop muted>
+            <source src="./assets/retro-feet-gif.mp4" type="video/mp4" />
+          </video>-->
 
-</main>
-    
-</body>
+    </main>
+  </body>
 </html>

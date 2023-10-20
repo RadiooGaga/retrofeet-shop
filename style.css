@@ -10,138 +10,226 @@
     --color-red:#e07b5fb8;
     --color-bluemarine:#3d405b;
     --color-green:#81b29a;
+    --color-blue:#2a8ce3a3;
     --color-gold:#f2cc8f;
     --color-pinkie:#f4dbde;
     --color-grey:#e4dcdf;
     --color-violet:#c7bed7;
-    --font-family:'Paralines-Regular';
-    --font-logo:'Thunderstorm';
-    
+    --font-color:var(--color-bluemarine);
+    --font-2:'Paralines-Regular';
+    --font-1:'Thunderstorm';  
 }
 
 @font-face {
-    font-family: 'Paralines-Regular';
-    src:url(./fonts/Paralines-Regular.otf)
-    format(otf);
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Paralines-Regular';src:url(./fonts/Paralines-Regular.otf)format(otf);font-weight: normal;font-style: normal;
 }
-
-@font-face {
-    font-family: 'Thunderstorm';
-    src:url(./fonts/Thunderstorm.otf)
-    format(otf);
-    font-weight: normal;
-    font-style: normal;
+@font-face { 
+    font-family: 'Thunderstorm';src:url(./fonts/Thunderstorm.otf)format(otf);font-weight: normal; font-style: normal;
 }
 
 
 
-html {
+main {
     width:100%;
     background-color: var(--color-grey);
 }
 
+h1,h2,h3,a {
+    color:var(--font-color);
+    letter-spacing: 3px;
+}
+.intro > h1 {
+    color:transparent;
+}
 
-.header-container {
+header {
     display: flex;
+    padding: 14px;
     width: 100%;
-    height: 200px;
-    align-items: center;
+    height: 140px;
     justify-content: space-between;
-    background-color: var(--color-red);
+    align-items: center;
     background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
 }
 
-
-
-.header-container > video {
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-    filter: saturate(40%);  
-}
-
 .logo {
-    display: flex;
-    width: 200px;
-    height: 100px;
-    filter: saturate(80%);  
+    display: block;
+    width: 13%;
+    height: 100%;
+    filter: opacity(70%);
+    padding-left: 1em;
 }
-
 
 
 #brand {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 25%;
-    height: 100%;
-    justify-content: center;
-    text-align: center;
+    width: 20%;
+    align-items: center;
 }
 
 .nav-bar {
-    display: flex;
-    width: 100%;
-    height: 70px;
-}
-
-.menu-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    background-color: var(--color-green);
+    grid-template-columns: repeat(5, 1fr);
 }
 
-.menu-container > a {
-    text-decoration: none;
-    font-family: var(--font-family);
-    color: var(--color-bluemarine);
-}
-
-.favorites {
-    width: 100%;
-}
-
-.favorites-container > img {
-    flex-basis: 0px;
-    flex-grow: 1;
-    object-fit: contain;
-  
-}
-
-.favorites-container {
-    width: 100%;
+.nav-bar > div {
     display: flex;
-    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.nav-bar > div > a {
+    text-decoration: none;
+    padding: 0 12px 0 12px;
+    color: rgb(56, 54, 54);
+    font-family:var(--font-2);
+    letter-spacing: 3px;
+}
+
+.nav-bar > .menu1 {
+    background-color: var(--color-violet);
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+}
+
+.nav-bar > .menu2 {
+    background-color: var(--color-gold);
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+}
+
+.nav-bar > .menu3 {
+    background-color: var(--color-blue);
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+}
+
+.nav-bar > .menu4 {
+    background-color: var(--color-green);
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+}
+
+.nav-bar > .menu5 {
+    background-color: var(--color-red);
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+}
+
+.favorites, .essencials {
+    display: block;
+    width: 100%;
+    padding: 2em;
+    background-color: white; 
+}
+
+.favorites, .essencials > h3 {
+    padding-left: 2.5em;
+}
+
+.favorites-container, .essencials-container {
+    display: flex;
+    width: 100%;
+    gap: 0.5em;
     flex-wrap: wrap;
-    gap: 0.2em;
     background-color: white;
 }
+
+.favorites-container > div {
+    display: flex;
+    flex-basis: 0px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.essencials-container > div {
+    display: flex;
+    flex-basis: 0px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.favorites-container > div > img {
+    object-fit: contain;
+}
+
+.essencials-container > div > img {
+    object-fit: contain;
+}
+
+.advertising, .style {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.advertising-gallery, .style-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 0.5fr);
+    padding: 1em;
+    gap: 0.5em;
+    background-color: var(--color-red);
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+}
+
+.advertising-gallery> div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.style-gallery > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.poster1, .style1 {
+    grid-column: 1/2;
+}
+.poster2, .style2 {
+    grid-column: 2/3;
+}
+.poster3, .style3 {
+    grid-column: 3/4;
+}
+.poster4, .style4 {
+    grid-column: 4/5;
+}
+.poster5, .style5 {
+    grid-column: 5/6;
+}
+
+
 
 
 
 h1 {
-    font-family: var(--font-logo);
+    font-family: var(--font-1);
     font-size: 20px;
     color: transparent;
     color: var(--color-bluemarine);
 }
 
 h2 {
-    font-family: var(--font-logo);
-    font-size: 40px;
-    font-weight:100;
-    letter-spacing: 1px;
+    font-family: var(--font-1);
+    font-size: 2.5em;
+    font-weight: 100;
+    letter-spacing: 2px;
     color: var(--color-bluemarine);
 }
 
-p {
-    font-style: italic;
-    font-family: var(--font-family);
-    color: var(--color-bluemarine);
+h3 {
+    font-size: 14px;
+    font-family: var(--font-2);
 }
+
+p {
+    color: var(--font-color);
+}
+
+
+
+
+
 
