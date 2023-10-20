@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+:root {
+    --color-vanilla:#f4f1de;
+    --color-red:#e07b5fb8;
+    --color-bluemarine:#3d405b;
+    --color-green:#81b29a;
+    --color-gold:#f2cc8f;
+    --color-pinkie:#f4dbde;
+    --color-grey:#e4dcdf;
+    --color-violet:#c7bed7;
+    --font-family:'Paralines-Regular';
+    --font-logo:'Thunderstorm';
+    
+}
+
+@font-face {
+    font-family: 'Paralines-Regular';
+    src:url(./fonts/Paralines-Regular.otf)
+    format(otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Thunderstorm';
+    src:url(./fonts/Thunderstorm.otf)
+    format(otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+html {
+    width:100%;
+    background-color: var(--color-grey);
+}
+
+
+.header-container {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-red);
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+}
+
+
+
+.header-container > video {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(40%);  
+}
+
+.logo {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    filter: saturate(80%);  
+}
+
+
+
+#brand {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-bar {
+    display: flex;
+    width: 100%;
+    height: 70px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-green);
+}
+
+.menu-container > a {
+    text-decoration: none;
+    font-family: var(--font-family);
+    color: var(--color-bluemarine);
+}
+
+.favorites {
+    width: 100%;
+}
+
+.favorites-container > img {
+    flex-basis: 0px;
+    flex-grow: 1;
+    object-fit: contain;
+  
+}
+
+.favorites-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.2em;
+    background-color: white;
+}
+
+
+
+h1 {
+    font-family: var(--font-logo);
+    font-size: 20px;
+    color: transparent;
+    color: var(--color-bluemarine);
+}
+
+h2 {
+    font-family: var(--font-logo);
+    font-size: 40px;
+    font-weight:100;
+    letter-spacing: 1px;
+    color: var(--color-bluemarine);
+}
+
+p {
+    font-style: italic;
+    font-family: var(--font-family);
+    color: var(--color-bluemarine);
+}
+
