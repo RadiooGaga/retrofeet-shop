@@ -27,48 +27,56 @@
     font-family: 'Thunderstorm';src:url(./fonts/Thunderstorm.otf)format(otf);font-weight: normal; font-style: normal;
 }
 
+.nav-bar > div, footer, header {
+    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+}
+
 
 
 main {
     width:100%;
+    height: 100vh;
     background-color: var(--color-grey);
 }
 
-h1,h2,h3,a {
+h1,h2,h3,h4,a {
     color:var(--font-color);
     letter-spacing: 3px;
 }
-.intro > h1 {
+
+a:hover {
+    cursor: pointer;
+}
+
+#intro {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#intro > img {
+    padding-right: 30px;
+}
+
+#intro > h1 {
     color:transparent;
+    display: none;
+
 }
 
 header {
     display: flex;
     padding: 14px;
     width: 100%;
-    height: 140px;
-    justify-content: space-between;
-    align-items: center;
-    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
-}
-
-.logo {
-    display: block;
-    width: 13%;
-    height: 100%;
-    filter: opacity(70%);
-    padding-left: 1em;
-}
-
-
-#brand {
-    display: flex;
-    width: 20%;
+    height: 160px;
     align-items: center;
 }
 
 .nav-bar {
+    width: 50%;
     display: grid;
+    padding: 0 20px 0 20px;
     grid-template-columns: repeat(5, 1fr);
 }
 
@@ -89,29 +97,26 @@ header {
     letter-spacing: 3px;
 }
 
+
+
 .nav-bar > .menu1 {
-    background-color: var(--color-violet);
-    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+    background-color: var(--color-violet); 
 }
 
 .nav-bar > .menu2 {
-    background-color: var(--color-gold);
-    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+    background-color: var(--color-gold);  
 }
 
 .nav-bar > .menu3 {
-    background-color: var(--color-blue);
-    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+    background-color: var(--color-blue);   
 }
 
 .nav-bar > .menu4 {
-    background-color: var(--color-green);
-    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+    background-color: var(--color-green);  
 }
 
 .nav-bar > .menu5 {
     background-color: var(--color-red);
-    background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
 }
 
 .favorites, .essencials {
@@ -127,7 +132,6 @@ header {
 
 .favorites-container, .essencials-container {
     display: flex;
-    width: 100%;
     gap: 0.5em;
     flex-wrap: wrap;
     background-color: white;
@@ -155,14 +159,6 @@ header {
     object-fit: contain;
 }
 
-.advertising, .style {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-
-}
-
 .advertising-gallery, .style-gallery {
     display: grid;
     grid-template-columns: repeat(5, 0.5fr);
@@ -172,7 +168,7 @@ header {
     background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
 }
 
-.advertising-gallery> div > img{
+.advertising-gallery > div > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -200,23 +196,16 @@ header {
     grid-column: 5/6;
 }
 
-
-
-
-
 h1 {
     font-family: var(--font-1);
-    font-size: 20px;
+    
     color: transparent;
     color: var(--color-bluemarine);
 }
 
 h2 {
     font-family: var(--font-1);
-    font-size: 2.5em;
-    font-weight: 100;
-    letter-spacing: 2px;
-    color: var(--color-bluemarine);
+    font-size: 28px;
 }
 
 h3 {
@@ -229,7 +218,82 @@ p {
 }
 
 
+.newsletter-container {
+    display: flex;
+    width: 100%;
+    height: 400px;
+}
+
+.newsletter-container > video {
+    width: 50%;
+    object-fit: cover;
+}
+
+.form {
+    width: 50%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 120px;
+}
+
+
+footer > div, video {
+    width: 33%;
+    height: 120px;
+    object-fit: cover;
+}
 
 
 
 
+
+@media screen and (max-width: 450px) {
+
+    .nav-bar {
+        display: block;
+        width: 250px;
+        height: 210px;
+        position: absolute;
+        border: 5px solid var(--color-grey);
+        right: 1px;
+    }
+
+    header {
+        display: block;
+        height: 140px;
+        position: relative;
+    }
+
+    h2 {
+        position: absolute;
+        font-size: 0.5em;
+    }
+
+    .advertising-gallery, .style-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 0.5fr);
+        padding: 0.5em;
+        gap:0;
+    }
+
+    footer > div > h4 {
+        font-size: 8px;
+    }
+}
+
+@media screen and (min-width:450px) and (max-width:870px) {
+
+   #intro {
+    display: block;
+   }
+    #intro > h2 {
+        font-size: 17px;
+
+    }
+    
+    
+}
