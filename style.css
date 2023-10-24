@@ -73,11 +73,6 @@ header {
     width: 50%;
 }
 
-#intro > div > h1 {
-    color:transparent;
-    display: none;
-}
-
 .navbar {
     display: flex;
     text-align: center;
@@ -142,8 +137,50 @@ header {
     background-color: var(--color-red);
 }
 
+.brand-presentation {
+    display: flex;
+    align-items: center;
+}
+
+.brand-presentation > div {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    background-color: white;
+    border-bottom: 0.5px solid var(--color-grey);
+}
+
+.paragraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    padding: 0 2em 0 2em;
+    width: 33%;
+}
+
+.paragraph > p {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    color: rgb(51, 50, 50);
+}
+
+.brand1 {
+    width: 33%;
+    object-fit: cover;
+}
+
+.brand2 {
+    transform: scaleX(-1);
+    width: 33%;
+    object-fit: cover;
+}
+
 .favorites, .essencials {
-    padding-top: 2em;
+    padding-top: 2.5em;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -196,13 +233,15 @@ header {
 
 h1 {
     font-family: var(--font-1);
+    letter-spacing: 10px;
     color: transparent;
+    font-size: 40px;
     color: var(--color-bluemarine);
 }
 
 h2 {
     font-family: var(--font-1);
-    font-size: 28px;
+    font-size: 25px;
 }
 
 h3 {
@@ -322,6 +361,10 @@ footer > div, video {
         height: 120px;
     }
 
+    h1 {
+        font-size: 16px;
+    }
+
     h2 {
         font-size: 1em;
     }
@@ -385,6 +428,27 @@ footer > div, video {
 
     #chkToggle:checked +.main-nav {
         display: block;
+    }
+
+    .brand1 {
+        display: none;
+    }
+    
+    .brand-presentation > div {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .paragraph, .brand2 {
+        width: 100%;
+        padding: 1em;
+    }
+
+    .paragraph > p {
+        font-size: 10px;
+        padding: 0 0.5em ;
     }
 
     .favorites, .essencials {
@@ -478,6 +542,10 @@ footer > div, video {
         justify-content: center;
     }
 
+    h1 {
+        font-size: 20px;
+    }
+
     h2 {
         font-size: 14px;
         position: absolute;
@@ -502,9 +570,21 @@ footer > div, video {
         display: none;
     }
 
+    .paragraph {
+        width: 50%;
+    }
+
+    .paragraph > p {
+        font-size: 11px;
+    }
+
+    .brand1, .brand2 {
+        width: 25%;
+    }
+
     .favorites, .essencials {
         text-align: center;
-        padding: 1em;
+        padding: 2em 1em 1em 1em;
     }
 
     .favorites-container, .essencials-container {
@@ -548,8 +628,12 @@ footer > div, video {
 
 @media screen and (min-width:769px) and (max-width:1279px) {
 
+    h1 {
+        font-size: 20px;
+    }
+
     h2 {
-        font-size: 19px;
+        font-size: 18px;
     }
 
     a {
@@ -581,6 +665,10 @@ footer > div, video {
 
     .main-nav > div {
         padding: 0;
+    }
+
+    .paragraph > p {
+        font-size: 12px;
     }
 
     .essencials, .favorites {
@@ -674,7 +762,7 @@ footer > div, video {
     }
 
     h2 {
-        font-size: 38px;
+        font-size: 35px;
     }
 
 }
