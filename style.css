@@ -27,7 +27,7 @@
     font-family: 'Thunderstorm';src:url(./fonts/Thunderstorm.otf)format(otf);font-weight: normal; font-style: normal;
 }
 
-.navbar > div, footer, header, .newsletter-container {
+.navbar > div, footer, header {
     background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
 }
 
@@ -53,10 +53,6 @@ h1,h2,h3,h4,a,label {
     color:var(--font-color);
     letter-spacing: 2px;
     text-decoration: none;
-}
-
-a:hover {
-    cursor: pointer;
 }
 
 header {
@@ -88,6 +84,7 @@ header {
 }
 
 .main-nav {
+    
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
@@ -146,7 +143,7 @@ header {
 }
 
 .favorites, .essencials {
-    padding: 2em;
+    padding-top: 2em;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -155,6 +152,7 @@ header {
 }
 
 .favorites-container, .essencials-container {
+    padding: 2em 0 2em 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -163,15 +161,24 @@ header {
 
 .favorites-container > div, .essencials-container > div {
     display: block;
+    align-items: center;
+    align-content: center;
     width: 25%;
     text-align: center;
     background-color: white;
 }
 
-.essencials-container > div > img, .favorites-container > div > img {
-    object-fit: contain;
+.item1, .item3, .item8 {
+    padding-top: 24px;
 }
 
+.item4, .item5 {
+    padding-bottom: 17px;
+}
+
+.essencials-container > div > img, .favorites-container > div > img {
+    object-fit: contain;   
+}
 
 .advertising, .style {
     padding: 2em 0;
@@ -201,19 +208,28 @@ h2 {
 h3 {
     font-size: 14px;
     font-family: var(--font-2);
-    padding-left: 1em;
+}
+
+a {
+    font-size: 12px;
+}
+
+a:hover {
+    cursor: pointer;
 }
 
 p {
-    font-size: 8px;
-    color: var(--font-color);
-    padding: 0;
+    font-size: 10px;
+    color: var(--color-red);
+    padding: 0 1.5em 0 1.5em;
     margin: 0;
 }
 
 .newsletter-container {
     display: flex;
+    height: 400px;
     justify-content: center;
+    align-items: center;
     padding: 3em 2em 3em 2em;
     border-top: 1px solid rgb(218, 218, 225);
     border-bottom: 1px solid rgb(218, 218, 225);
@@ -225,7 +241,7 @@ p {
     justify-content: center; 
     align-items: center;
     border-radius: 10px;
-    width: 65%;
+    width: 68%;
     height: 200px;
     padding: 40px;  
 }
@@ -258,11 +274,12 @@ button {
 
 footer {
     width: 100%;
-    padding-top: 2em;
+    height: 150px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    align-items: center;
     background-color: white;
     
 }
@@ -270,12 +287,14 @@ footer {
 
 footer > div, video {
     width: 33%;
-    height: 120px;
+    height: 150px;
     object-fit: cover;
 }
 
 .help {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     padding: 10px 10px 0 10px;
     
@@ -334,6 +353,9 @@ footer > div, video {
     }
 
     .main-nav {
+        position: absolute;
+        top: 120px;
+        right: 20px;
         display: none;
     }
 
@@ -367,11 +389,11 @@ footer > div, video {
 
     .favorites, .essencials {
         align-items: center;
-        padding: 1em 0em 2em 0em;
+        padding: 1em 0em 1em 0em;
     }
 
     .favorites-container, .essencials-container {
-        padding: 20px;
+        padding: 10px;
 
     }
     
@@ -382,8 +404,12 @@ footer > div, video {
         align-items: center;
     }
 
-    .newsletter-container > div {
-        width: 100%;
+    .newsletter-container {
+        height: 230px;
+    }
+
+    .newsletter-container > div { 
+        width: 100%; 
     }
 
     label {
@@ -415,7 +441,7 @@ footer > div, video {
         align-items: center;
         height: 80px;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         gap:10px;
     }
 
@@ -434,6 +460,10 @@ footer > div, video {
 
 @media screen and (min-width:481px) and (max-width:768px) {
 
+    header {
+        height: 170px;
+    }
+
     #intro {
         display: flex;
         align-items: center;
@@ -446,7 +476,6 @@ footer > div, video {
         flex-wrap: nowrap;
         text-align: center;
         justify-content: center;
-        position: absolute;
     }
 
     h2 {
@@ -458,7 +487,7 @@ footer > div, video {
 
     .navbar {
         position: absolute;
-        top: 120px;
+        top: 130px;
     }
 
     .main-nav > div {
@@ -475,6 +504,7 @@ footer > div, video {
 
     .favorites, .essencials {
         text-align: center;
+        padding: 1em;
     }
 
     .favorites-container, .essencials-container {
@@ -490,6 +520,14 @@ footer > div, video {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .newsletter-container {
+        height: 250px;
+    }
+
+    .newsletter-container > div { 
+        width: 70%; 
     }
 
     .help > a {
@@ -510,6 +548,14 @@ footer > div, video {
 
 @media screen and (min-width:769px) and (max-width:1279px) {
 
+    h2 {
+        font-size: 19px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+
     header {
         width: 100%; 
     }
@@ -523,12 +569,12 @@ footer > div, video {
         display: flex;
         align-items: center;
         padding: 5px;
-        gap: 18px;
+        gap: 22px;
         
     }
 
     #intro > div {
-        width: 42%;
+        width: 35%;
         text-align: center;   
         align-items: center;
     }
@@ -540,21 +586,27 @@ footer > div, video {
     .essencials, .favorites {
         display: flex;
         width: 100%;
-        gap: 20px;
+        gap: 5px;
         text-align: center;
-        padding: 20px 0 20px 0;
+        padding: 2em 1em 2em 1em;
     }
 
     .favorites-container, .essencials-container {
         display: flex;
+        padding-right: 1em;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
+        align-self: center;
         text-align: center;
     }
 
-    .favorites-container > div, .essencials-container > div {
-        padding: 20px;
+    .newsletter-container {
+        height: 290px;
+    }
+
+    .newsletter-container > div { 
+        width: 60%; 
     }
 
     .help > a {
@@ -570,6 +622,10 @@ footer > div, video {
 
 @media screen and (min-width:1280px) {
 
+    a {
+        font-size: 16px;
+    }
+
     #chkToggle, .icon {
         display: none;
     }
@@ -581,20 +637,44 @@ footer > div, video {
 
     #intro {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        width: 100%; 
+        width: 98%; 
     }
 
     #intro > div {
-        width: 42%;
-        display: flex;
-        align-items: center;
-        text-align: center;
+        width: 52%;
+        align-items: center; 
+        gap: 50px;
+    }
+
+    .navbar {
+        padding: 30px;
     }
     
     .main-nav > div > a {
         font-size: 18px;
+    }
+
+    .favorites, .essencials {
+        padding: 2em 1em 2em 1em;
+    }
+
+
+    .newsletter-container {
+        height: 300px;
+    }
+
+    .newsletter-container > div { 
+        width: 60%; 
+    }
+
+    h3,a {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 38px;
     }
 
 }
