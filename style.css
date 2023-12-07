@@ -14,6 +14,7 @@
     --color-gold:#f2cc8f;
     --color-pinkie:#f4dbde;
     --color-grey:#e4dcdf;
+    --color-extra-grey: #f5f1f1;
     --color-violet:#c7bed7;
     --font-color:var(--color-bluemarine);
     --font-2:'Paralines-Regular';
@@ -39,14 +40,10 @@
     background-color: var(--color-red);
 }
 
-html {
-    max-width: 100%;
-}
-
 main {
     width:100%;
     height: 100%;
-    background-color: var(--color-grey);
+    background-color: var(--color-pinkie);
 }
 
 h1,h2,h3,h4,a,label {
@@ -57,7 +54,6 @@ h1,h2,h3,h4,a,label {
 
 header {
     display: flex;
-    padding: 14px;
     width: 100%;
     height: 160px;
     align-items: center;
@@ -79,7 +75,6 @@ header {
 }
 
 .main-nav {
-    
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
@@ -179,45 +174,94 @@ header {
     object-fit: cover;
 }
 
-.favorites, .essencials {
-    padding-top: 2.5em;
-    width: 100%;
+#filters {
+    background-color: var(--color-pinkie);
+    width: 20%;
+    float: left;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+select, button:hover {
+    cursor: pointer;
+}
+
+select, input {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: var(--color-vanilla);
+}
+#input-Price-Id {
+    width: 100%;
+}
+
+#products {
+    width: 80%;
+    display: flex;
+    padding: 1em 0em;
+    flex-direction: column;
     background-color: white;
 }
 
-.favorites-container, .essencials-container {
-    padding: 2em 0 2em 0;
+.productsContainer {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-}
-
-.favorites-container > div, .essencials-container > div {
-    display: block;
-    align-items: center;
-    align-content: center;
-    width: 25%;
-    text-align: center;
     background-color: white;
+    justify-content: space-around;
+    
 }
 
-.item1, .item3, .item8 {
-    padding-top: 24px;
+.eachProduct {
+    width: 25%;
+    padding-bottom: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-self: baseline;
+    background-color: white;
+    border: 1px solid var(--color-extra-grey);
+    border-radius: 20px;
+   
 }
 
-.item4, .item5 {
-    padding-bottom: 17px;
+.infoButton:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.2s;
 }
 
-.essencials-container > div > img, .favorites-container > div > img {
-    object-fit: contain;   
+.imgContainer {
+    display: flex;
+    flex-direction: column;
 }
 
-.advertising, .style {
+.imgContainer > img {
+    width: 200px;
+    height: 200px; 
+    padding: 1em; 
+    object-fit: contain;  
+}
+
+.infoButton {
+    width: 150px;
+    margin-bottom: 20px;
+    background-color: var(--color-pinkie);
+}
+
+
+.infoButton:hover{
+    background-color: var(--color-green);
+    color: white;
+}
+
+#advertising, #style {
     padding: 2em 0;
     background-color: white;
     background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
@@ -229,6 +273,13 @@ header {
     padding: 10px 0 10px 0;
     gap: 0.5em;
 }
+
+.galleryPic, .stylePic {
+    width: 220px;
+    height: 320px;
+}
+
+
 
 
 h1 {
@@ -258,10 +309,10 @@ a:hover {
 }
 
 p {
-    font-size: 10px;
+    font-size: 14px;
     color: var(--color-red);
     padding: 0 1.5em 0 1.5em;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
 .newsletter-container {
@@ -308,6 +359,10 @@ input {
 button {
     padding: 1em;
     border-radius: 5px;
+}
+
+.borrarFiltros {
+    background-color: var(--color-green);
 }
 
 
@@ -459,21 +514,33 @@ footer > div, video {
         padding: 0 0.5em ;
     }
 
-    .favorites, .essencials {
-        align-items: center;
-        padding: 1em 0em 1em 0em;
+    .imgContainer > img {
+        width: 280px;
+        height: 280px; 
     }
 
-    .favorites-container, .essencials-container {
-        padding: 10px;
-
+    #filters {
+        background-color: var(--color-pinkie);
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        padding: 20px;
+        gap:5px;
     }
     
-    .favorites-container > div, .essencials-container > div {
+    #products {
+        width: 100%;
+    }
+
+    .eachProduct{
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        align-self: flex-end;
     }
 
     .newsletter-container {
@@ -590,24 +657,30 @@ footer > div, video {
         width: 25%;
     }
 
-    .favorites, .essencials {
-        text-align: center;
-        padding: 2em 1em 1em 1em;
+    .imgContainer > img {
+        width: 230px;
+        height: 230px; 
+        padding: 0.5em; 
+        object-fit: contain;  
     }
 
-    .favorites-container, .essencials-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        text-align: center;
+    #products {
+        width: 70%;
+    }
+    .eachProduct{
+        width: 100%;
     }
 
-    .favorites-container > div, .essencials-container > div {
-        width: 50%;
+    #filters {
+        background-color: var(--color-pinkie);
+        width: 30%;
         display: flex;
+        float: left;
         flex-direction: column;
-        align-items: center;
+        align-content: center;
+        justify-content: center;
+        padding: 20px 5px;
+        gap:5px;
     }
 
     .newsletter-container {
@@ -679,22 +752,37 @@ footer > div, video {
         font-size: 12px;
     }
 
-    .essencials, .favorites {
+    #filters {
+        width: 20%;
+    }
+    .products {
         display: flex;
-        width: 100%;
+        flex-wrap: wrap;
+        width: 90%;
         gap: 5px;
         text-align: center;
         padding: 2em 1em 2em 1em;
     }
 
-    .favorites-container, .essencials-container {
+    .productsContainer {
+        width: 100%;
         display: flex;
-        padding-right: 1em;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
         align-self: center;
         text-align: center;
+    }
+
+    .eachProduct {
+        width: 50%;
+    }
+
+    .imgContainer > img {
+        width: 270px;
+        height: 270px; 
+        padding: 1em; 
+        object-fit: contain;  
     }
 
     .newsletter-container {
@@ -735,7 +823,7 @@ footer > div, video {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 98%; 
+        width: 100%; 
     }
 
     #intro > div {
@@ -752,8 +840,23 @@ footer > div, video {
         font-size: 18px;
     }
 
-    .favorites, .essencials {
-        padding: 2em 1em 2em 1em;
+    #products {
+        width: 90%;
+    }
+
+    #filters {
+        width: 10%;
+    }
+
+    .eachProduct{
+        width: 24%;
+    }
+
+    .imgContainer > img {
+        width: 320px;
+        height: 320px; 
+        padding: 1em; 
+        object-fit: contain;  
     }
 
 
