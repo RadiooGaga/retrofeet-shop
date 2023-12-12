@@ -5,6 +5,7 @@ const products = [
     title: 'ETONIC TRANS SLAM LOW',
     brand: 'ETONIC',
     color: 'colored',
+    paragraph: "blablabla",
     price: 65.00,
     stars: 3,
     reviews: 2,
@@ -208,8 +209,6 @@ const stylePics = [
 ]
 
 
-
-
 const byDefault = 'all';
 let selectedSeller = 'all';
 let selectedBrand = 'all';
@@ -391,40 +390,92 @@ const selector = () => {
 
 
 
-
 const printProducts = (products) => {
     const divProducts = document.querySelector(".productsContainer");
     divProducts.innerHTML = "";
 
-for (const product of products){
-    const sectionProducts = document.querySelector("#products");
-    const divProduct = document.createElement("div");
-    const divImg = document.createElement("div");
-    const img = document.createElement("img");
-    const title = document.createElement("h3");
-    const price = document.createElement("p");
-    const infoButton = document.createElement("button");
+    for (const product of products){    
+        const sectionProducts = document.querySelector("#products");
+        const divProduct = document.createElement("div");
+        const divImg = document.createElement("div");
+        const img = document.createElement("img");
+        const title = document.createElement("h3");
+        const price = document.createElement("p");
+        const openButton = document.createElement("button");
     
-   
-    sectionProducts.appendChild(divProducts);
-    divProducts.appendChild(divProduct);
-    divProduct.className = ("eachProduct");
-    divProduct.appendChild(divImg);
-    divImg.appendChild(img);
-    divImg.classList.add("imgContainer");
-    img.src = product.img;
-    divProduct.appendChild(infoButton);
-    infoButton.classList.add("infoButton");
-    infoButton.textContent = "ver detalles";
-    title.textContent = product.title;
-    price.textContent = `${product.price} €`;
-    divProduct.appendChild(title);
-    divProduct.appendChild(price);
+    
+        sectionProducts.appendChild(divProducts);
+        divProducts.appendChild(divProduct);
+        divProduct.className = ("eachProduct");
+        divProduct.appendChild(divImg);
+        divImg.appendChild(img);
+        divImg.classList.add("imgContainer");
+        img.src = product.img;
+        divProduct.appendChild(openButton);
+        openButton.setAttribute("id", product.id);
+        openButton.textContent = "ver detalles";
+        title.textContent = product.title;
+        price.textContent = `${product.price} €`;
+        divProduct.appendChild(title);
+        divProduct.appendChild(price);
+
+        openButton.addEventListener("click", (event) => {
+        
+            let clickedCardId = parseInt(event.target.id);
+            const productsArray = [...products];
+            const result = productsArray.filter((product) => product.id === clickedCardId)[0];
+            console.log(result);
+        
+        })
     }
+    
 };
 
 printProducts(products);
 selector();
+
+
+
+
+
+
+const printCard = (e) => {
+    const divProducts = document.querySelector(".productsContainer");
+    //divProducts.innerHTML = "";
+    
+    
+    const modalProduct = document.createElement("div");   
+    const img = document.createElement("img");
+    const title = document.createElement("h3");
+    const paragraph = document.createElement("p");
+    const price = document.createElement("p");
+    const closeButton = document.createElement("button");
+    console.log(modalProduct)
+        
+    modalProduct.setAttribute("id", "seeDetails");
+    img.src = product.img;
+    modalProduct.appendChild(img);
+    modalProduct.appendChild(title);
+    title.textContent = product.title;
+    modalProduct.appendChild(paragraph);
+    paragraph.textContent = product.paragraph;
+    modalProduct.appendChild(price);
+    price.textContent = `${product.price} €`;
+    modalProduct.appendChild(closeButton);
+    closeButton.setAttribute("id","closeButton");
+    closeButton.textContent = "X";
+
+    divProducts.appendChild(modalProduct);
+
+    
+    closeButton.addEventListener("click", (event) => {
+        
+    })
+    
+}
+printProducts(products);
+
+
 
 
 
