@@ -247,20 +247,22 @@ select, input {
     border-radius: 10px;
 }
 
-#openButton:hover {
+button:hover {
     cursor: pointer;
     transform: scale(1.2);
     transition: transform 0.2s;
+    background-color: var(--color-green);
+    color: white;
 }
-
-#openButton {
-    
-    
+button {
+    width: 150px;
+    margin-bottom: 20px;
+    background-color: var(--color-red);
 }
-
+/*
 #closeButton {
-    background-color: #3d405b;
-}
+    display: none;
+}*/
 
 
 .imgContainer {
@@ -275,21 +277,6 @@ select, input {
     object-fit: contain;  
 }
 
-#openButton {
-    width: 150px;
-    margin-bottom: 20px;
-    background-color: var(--color-pinkie);
-}
-
-#closeButton {
-    display: none;
-}
-
-
-#openButton:hover{
-    background-color: var(--color-green);
-    color: white;
-}
 
 #advertising, #style {
     position: relative;
