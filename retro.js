@@ -357,6 +357,7 @@ const selector = () => {
 
     const searchButton = document.createElement("button");
         searchButton.setAttribute("type", "input");
+        searchButton.classList.add("buscarPrecio"); 
         searchButton.textContent = 'BUSCAR PRECIO';
 
         divFilters.appendChild(searchButton);
@@ -425,12 +426,13 @@ const printProducts = (products) => {
             const productsArray = [...products];
             const result = productsArray.filter((product) => product.id === clickedCardId)[0];
             console.log(result);
+            window.scrollTo(0,0)
+            printCard(result,products)
         
         })
     }
     
 };
-
 printProducts(products);
 selector();
 
@@ -439,13 +441,15 @@ selector();
 
 
 
-const printCard = (e) => {
+const printCard = (product, products) => {
+
     const divProducts = document.querySelector(".productsContainer");
-    //divProducts.innerHTML = "";
-    
-    
+    divProducts.innerHTML = "";
+
     const modalProduct = document.createElement("div");   
+    const divImg = document.createElement("div");
     const img = document.createElement("img");
+    const productDetails = document.createElement("div");
     const title = document.createElement("h3");
     const paragraph = document.createElement("p");
     const price = document.createElement("p");
@@ -453,26 +457,33 @@ const printCard = (e) => {
     console.log(modalProduct)
         
     modalProduct.setAttribute("id", "seeDetails");
+    modalProduct.appendChild(divImg);
+    divImg.appendChild(img);
+    divImg.className = ("divImgCard");
+    modalProduct.appendChild(productDetails);
+    productDetails.className = ("productDetails");
+    
     img.src = product.img;
-    modalProduct.appendChild(img);
-    modalProduct.appendChild(title);
+    productDetails.appendChild(title);
     title.textContent = product.title;
-    modalProduct.appendChild(paragraph);
+    productDetails.appendChild(paragraph);
     paragraph.textContent = product.paragraph;
-    modalProduct.appendChild(price);
+    productDetails.appendChild(price);
     price.textContent = `${product.price} €`;
     modalProduct.appendChild(closeButton);
     closeButton.setAttribute("id","closeButton");
     closeButton.textContent = "X";
 
-    divProducts.appendChild(modalProduct);
 
-    
-    closeButton.addEventListener("click", (event) => {
-        
+    closeButton.addEventListener("click", () => {
+        printProducts(products)
+        window.scrollTo(0,0)
     })
-    
+
+    divProducts.appendChild(modalProduct);
+   
 }
+
 printProducts(products);
 
 

@@ -201,9 +201,9 @@ select, input {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
-    padding: 1em 0em;
+    padding: 1em;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--color-pinkie)
 }
 
 .productsContainer {
@@ -212,7 +212,7 @@ select, input {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: white;
+    background-color: var(--color-pinkie);
     justify-content: space-around;
     
 }
@@ -233,18 +233,27 @@ select, input {
 
 #seeDetails {
     display: flex;
-    padding: 1em;
+    padding: 10px;
     width: 100%;
     height: 100%;
     text-align: center;
-    background-color: var(--color-extra-grey);
+    background-color: white;
     border: 1px solid var(--color-extra-grey);
+    border-radius: 10px;
 }
 
-#seeDetails > img { 
-    width: 50%;
-    float: left;
+#seeDetails > div > img { 
+    width: 80%;
+    object-fit: contain;
     border-radius: 10px;
+}
+
+.divImgCard, .productDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 button:hover {
@@ -259,10 +268,13 @@ button {
     margin-bottom: 20px;
     background-color: var(--color-red);
 }
-/*
+
 #closeButton {
-    display: none;
-}*/
+    width: 100px;
+    height: 70px;
+    padding: 20px;
+    
+}
 
 
 .imgContainer {
@@ -273,7 +285,6 @@ button {
 .imgContainer > img {
     width: 200px;
     height: 200px; 
-    padding: 1em; 
     object-fit: contain;  
 }
 
@@ -300,9 +311,6 @@ button {
     height: 320px;
 }
 
-
-
-
 h1 {
     font-family: var(--font-1);
     letter-spacing: 10px;
@@ -317,7 +325,7 @@ h2 {
 }
 
 h3 {
-    font-size: 14px;
+    font-size: 20px;
     font-family: var(--font-2);
 }
 
@@ -445,6 +453,14 @@ footer > div, video {
         font-size: 1em;
     }
 
+    h3 {
+        font-size: 13px;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
     #intro {
         display: flex;
         width: 100%;
@@ -536,8 +552,7 @@ footer > div, video {
     }
 
     .imgContainer > img {
-        width: 280px;
-        height: 280px; 
+        object-fit: contain;
     }
 
     #filters {
@@ -546,14 +561,30 @@ footer > div, video {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        align-content: center;
         justify-content: center;
-        padding: 20px;
-        gap:5px;
+        padding: 8px 5px;
     }
-    
+
+    #input-Price-Id {
+        height: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .buscarPrecio, .borrarFiltros {
+        width: 40%;
+        font-size: 8px;
+        margin: 10px;
+    }
+
+    select {
+        height: 3em;
+        font-size: 8px;
+    }
+
     #products {
         width: 100%;
+        padding: 5px;
     }
 
     .eachProduct{
@@ -562,6 +593,20 @@ footer > div, video {
         flex-direction: column;
         align-items: center;
         align-self: flex-end;
+    }
+    #seeDetails {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        background-color: white;
+    }
+
+    .divImgCard {
+        width: 50%;
+        padding-bottom: 20px;
     }
 
     .newsletter-container {
@@ -577,7 +622,12 @@ footer > div, video {
     }
 
     button {
-        padding: 0.5em;
+        padding: 5px;
+    }
+    #closeButton {
+
+        width: 30px;
+        height: 30px;
     }
 
     footer {
@@ -589,6 +639,9 @@ footer > div, video {
 
     footer > div {
         width: 100%;
+    }
+    footer > div > a {
+        font-size: 8px;
     }
     
     .rr-ss {
@@ -607,10 +660,6 @@ footer > div, video {
 
     video {
         width: 100%;
-    }
-
-    footer > div > a {
-        font-size: 8px;
     }
 }
 
@@ -646,8 +695,8 @@ footer > div, video {
         font-size: 14px;
         position: absolute;
         top: 11px;
-        
     }
+
 
     .navbar {
         position: absolute;
@@ -679,29 +728,67 @@ footer > div, video {
     }
 
     .imgContainer > img {
-        width: 230px;
-        height: 230px; 
-        padding: 0.5em; 
-        object-fit: contain;  
+        object-fit: cover;  
+    }
+
+    .productsContainer {
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-pinkie);
     }
 
     #products {
-        width: 70%;
-    }
+        display: flex;
+        width: 80%;
+        padding: 1em;
+        background-color: var(--color-pinkie);
+        
+   }
     .eachProduct{
         width: 100%;
     }
 
+    .productDetails {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #seeDetails {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border-radius: 10px;
+        
+    }
+    
+
     #filters {
         background-color: var(--color-pinkie);
-        width: 30%;
+        width: 20%;
         display: flex;
         float: left;
         flex-direction: column;
         align-content: center;
         justify-content: center;
-        padding: 20px 5px;
+        padding: 10px;
         gap:5px;
+    }
+
+    select {
+        font-size: 10px;
+    }
+
+    .borrarFiltros, .buscarPrecio {
+        width: 100%;
+        padding: 2px;
+    }
+
+    #closeButton {
+        width: 50px;
+        height: 40px;
+        margin: 20px;
     }
 
     .newsletter-container {
@@ -799,10 +886,7 @@ footer > div, video {
         width: 50%;
     }
 
-    .imgContainer > img {
-        width: 270px;
-        height: 270px; 
-        padding: 1em; 
+    .imgContainer > img { 
         object-fit: contain;  
     }
 
@@ -867,10 +951,6 @@ footer > div, video {
 
     #filters {
         width: 10%;
-    }
-
-    .eachProduct{
-        width: 24%;
     }
 
     .imgContainer > img {
