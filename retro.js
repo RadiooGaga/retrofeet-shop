@@ -435,7 +435,6 @@ const printProducts = (products) => {
             const productsArray = [...products];
             const result = productsArray.filter((product) => product.id === clickedCardId)[0];
             console.log(result);
-            window.scrollTo(0,0)
             printCard(result,products)
         
         })
