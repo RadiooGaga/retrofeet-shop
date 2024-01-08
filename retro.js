@@ -430,12 +430,12 @@ const printProducts = (products) => {
         divProduct.appendChild(price);
 
         openButton.addEventListener("click", (event) => {
+            var scrollPosition = 320;
 
             let clickedCardId = parseInt(event.target.id);
             const productsArray = [...products];
             const result = productsArray.filter((product) => product.id === clickedCardId)[0];
-            console.log(result);
-            window.scrollTo(320, 0);
+            window.scrollTo(0, scrollPosition);
             printCard(result,products)
         
         })
@@ -463,7 +463,6 @@ const printCard = (product, products) => {
     const paragraph = document.createElement("p");
     const price = document.createElement("p");
     const closeButton = document.createElement("button");
-    console.log(modalProduct)
         
     modalProduct.setAttribute("id", "seeDetails");
     modalProduct.appendChild(divImg);
