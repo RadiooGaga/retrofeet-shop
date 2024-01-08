@@ -430,11 +430,12 @@ const printProducts = (products) => {
         divProduct.appendChild(price);
 
         openButton.addEventListener("click", (event) => {
-        
+
             let clickedCardId = parseInt(event.target.id);
             const productsArray = [...products];
             const result = productsArray.filter((product) => product.id === clickedCardId)[0];
             console.log(result);
+            window.scrollTo(320, 0);
             printCard(result,products)
         
         })
