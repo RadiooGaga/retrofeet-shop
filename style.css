@@ -11,6 +11,7 @@
     --color-bluemarine:#3d405b;
     --color-green:#81b29a;
     --color-blue:#2a8ce3a3;
+    --color-lightBlue:#8cc5e4a3;
     --color-gold:#f2cc8f;
     --color-pinkie:#f4dbde;
     --color-grey:#e4dcdf;
@@ -33,7 +34,7 @@
 }
 
 .newsletter-container > div, label, form {
-    background-color: var(--color-green);
+    background-color: var(--color-lightBlue);
 }
 
 .advertising-gallery, .style-gallery, button {
@@ -268,11 +269,15 @@ button:hover {
     transition: transform 0.2s;
     background-color: var(--color-green);
     color: white;
+    box-shadow: 2px 2px 18px 2px var(--color-green);
 }
+
 button {
-    width: 150px;
+    width: 130px;
     margin-bottom: 20px;
-    background-color: var(--color-red);
+    border: none;
+    color: white;
+    box-shadow: 2px 2px 18px 2px var(--color-red);
 }
 
 #closeButton {
