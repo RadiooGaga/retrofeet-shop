@@ -256,6 +256,12 @@ select, input {
     width: 100%;
 }
 
+.priceTag {
+    color: var(--color-green);
+    font-size: 18px;
+    padding: 0;
+}
+
 button:hover {
     cursor: pointer;
     transform: scale(1.2);
@@ -340,7 +346,7 @@ a:hover {
 p {
     font-size: 14px;
     color: var(--color-red);
-    padding: 0 1.5em 0 1.5em;
+    padding: 1.5em;
     margin-bottom: 10px;
 }
 
@@ -454,11 +460,11 @@ footer > div, video {
     }
 
     h3 {
-        font-size: 13px;
+        font-size: 11px;
     }
 
     p {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     #intro {
@@ -587,6 +593,10 @@ footer > div, video {
         padding: 5px;
     }
 
+    .productsContainer {
+        gap: 5px;
+    }
+
     .eachProduct{
         width: 100%;
         display: flex;
@@ -605,8 +615,14 @@ footer > div, video {
     }
 
     .divImgCard {
-        width: 50%;
+        width: 100%;
         padding-bottom: 20px;
+    }
+
+    .priceTag {
+        color: var(--color-green);
+        font-size: 12px;
+        padding: 0;
     }
 
     .newsletter-container {
@@ -625,9 +641,10 @@ footer > div, video {
         padding: 5px;
     }
     #closeButton {
-
-        width: 30px;
-        height: 30px;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        margin: 0;
     }
 
     footer {
@@ -667,7 +684,7 @@ footer > div, video {
 
 
 
-@media screen and (min-width:481px) and (max-width:768px) {
+@media screen and (min-width:481px) and (max-width:769px) {
 
     header {
         height: 170px;
@@ -695,6 +712,10 @@ footer > div, video {
         font-size: 14px;
         position: absolute;
         top: 11px;
+    }
+
+    h3 {
+        font-size: 15px;
     }
 
 
@@ -728,24 +749,20 @@ footer > div, video {
     }
 
     .imgContainer > img {
-        object-fit: cover;  
+        object-fit: contain;  
     }
 
     .productsContainer {
         width: 100%;
         height: 100%;
+        gap: 5px;
         background-color: var(--color-pinkie);
     }
 
-    #products {
-        display: flex;
-        width: 80%;
-        padding: 1em;
-        background-color: var(--color-pinkie);
-        
-   }
+    
     .eachProduct{
         width: 100%;
+        padding-bottom: 1em;
     }
 
     .productDetails {
@@ -815,7 +832,7 @@ footer > div, video {
 
 
 
-@media screen and (min-width:769px) and (max-width:1279px) {
+@media screen and (min-width:770px) and (max-width:1279px) {
 
     h1 {
         font-size: 20px;
@@ -823,6 +840,10 @@ footer > div, video {
 
     h2 {
         font-size: 18px;
+    }
+
+    h3 {
+        font-size: 14px;
     }
 
     a {
@@ -883,7 +904,8 @@ footer > div, video {
     }
 
     .eachProduct {
-        width: 50%;
+        width: 47%;
+        margin: 3px;
     }
 
     .imgContainer > img { 
@@ -946,11 +968,19 @@ footer > div, video {
     }
 
     #products {
-        width: 90%;
+        width: 85%;
+    }
+    .productsContainer {
+        width: 100%;
+    }
+
+    .eachProduct {
+        width: 32%;
+        margin: 3px;
     }
 
     #filters {
-        width: 10%;
+        width: 15%;
     }
 
     .imgContainer > img {

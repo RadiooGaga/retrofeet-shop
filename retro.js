@@ -5,7 +5,7 @@ const products = [
     title: 'ETONIC TRANS SLAM LOW',
     brand: 'ETONIC',
     color: 'colored',
-    paragraph: "blablabla",
+    paragraph: "Fundada en 1876, Etonic es la marca de zapas más antigua que existe.¿Se puede ser más retro? Lo que es seguro es que, si llevas esto a tus pies, no es por casualidad.",
     price: 65.00,
     stars: 3,
     reviews: 2,
@@ -18,6 +18,7 @@ const products = [
     title: 'DUNLOP GREEN FLASH',
     brand: 'DUNLOP',
     color: 'colored',
+    paragraph: "Conservando sus colores originales, hablamos de un modelo más inglés que el té de las 5, con el que el tenista Fred Perry ganó Wimbledon en 1934; y Spud despertaba del coma etílico en la película 'Trainspotting'.",
     price: 29.75,
     stars: 4,
     reviews: 2,        
@@ -30,6 +31,7 @@ const products = [
     title: 'GOLA EQUIPE SUEDE',
     brand: 'GOLA',
     color: 'colored',
+    paragraph:"Si las zapas que te gustan son una mierda, esta marca fundada a principios del siglo XX no es apta para ti. Gola es un clásico repleto de modelos icónicos que no pueden faltar en tu colección Retrofeet.",
     price: 76.50,
     stars: 5,
     reviews: 4,        
@@ -42,6 +44,7 @@ const products = [
     title: 'REEBOK THE AZTEC',
     brand: 'REEBOK',
     color: 'colored',
+    paragraph:"Una marca que escribió sus mejores páginas en los años 80 y que convertidas en un clásico atemporal, seguimos luciendo cada día con orgullo todos los que, años más tarde, seguimos sin entender el logo del triángulo de esta marca.",
     price: 74.95,
     stars: 5,
     reviews: 3,        
@@ -54,6 +57,7 @@ const products = [
     title: 'PUMA SUEDE CLASSIC',
     brand: 'PUMA',
     color: 'blackandwhite',
+    paragraph: "Lanzadas a finales de los 60, las Puma Suede Classic fueron otro referente destacado cuando las zapas dieron el salto de las canchas a la calle. En los años 80, bailar breakdance en la calle con unas Puma Suede a tus pies, sumaba bastantes puntos.",
     price: 55.25,
     stars: 4,
     reviews: 5,        
@@ -66,6 +70,7 @@ const products = [
     title: 'PUMA DELPHIN DARK JASPER',
     brand: 'PUMA',
     color: 'colored',
+    paragraph:"Las PUMA Delphin se lanzó durante los años 70 y 80 en numerosas variaciones, ya que la marca experimentaba con técnicas y diseños. Con la Delphin OG, PUMA recupera las especificaciones y colores originales con un upper de ante completo y el Formstripe de cuero.",
     price: 90.0,
     stars: 4,
     reviews: 3,        
@@ -78,6 +83,7 @@ const products = [
     title: 'CONVERSE STAR PLAYER 76',
     brand: 'CONVERSE',
     color: 'blackandwhite',
+    paragraph: "Probablemente una de las siluetas más reconocibles de la marca, perfectas para lucir una de las versiones más bellas del logo de Converse formado por la estrella y el chevrón.¿Recuerdas tu primer par?",
     price: 63.00,
     stars: 4,
     reviews: 7,        
@@ -90,6 +96,7 @@ const products = [
     title: 'VANS OLD SKOOL',
     brand: 'VANS',
     color: 'blackandwhite',
+    paragraph:"Creadas bajo el cálido sol de California, este referente adoptado por los skaters de los 70 se ha convertido en una obligación para los amantes de las zapas que más molan y que quedan bien con todo.",
     price: 80.00,
     stars: 4,
     reviews: 9,        
@@ -102,6 +109,7 @@ const products = [
     title: 'ADIDAS SUPERSTAR',
     brand: 'ADIDAS',
     color: 'blackandwhite',
+    paragraph:"No podía faltar en nuestra selección Retrofeet. Un clásico al que sus horripilantes versiones, revisiones, rediseños y deconstrucciones, jamás podrán superar al original.",
     price: 80.00,
     stars: 5,
     reviews: 10,        
@@ -114,6 +122,7 @@ const products = [
     title: 'ADIDAS ORIGINALS SUPERSTAR 80s',
     brand: 'ADIDAS',
     color: 'blackandwhite',
+    paragraph: "Se lanzó originalmente en 1969 como un calzado de baloncesto, pero se volvió extremadamente popular en la escena del hip-hop en la década de 1980. La versión '80s' representa una reedición que celebra el legado de este modelo, el cual su influencia en la moda y la cultura pop las convierte en una elección atemporal para un buen amante de los verdaderos clásicos.",
     price: 130.00,
     stars: 4,
     reviews: 10,        
@@ -462,6 +471,7 @@ const printCard = (product, products) => {
     divImg.className = ("divImgCard");
     modalProduct.appendChild(productDetails);
     productDetails.className = ("productDetails");
+    price.className = ("priceTag");
     
     img.src = product.img;
     productDetails.appendChild(title);
