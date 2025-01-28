@@ -251,7 +251,7 @@ const filter = () => {
     if (filtered.size === 0){
         const noProductsAvailable = document.createElement("p");
         const divProducts = document.querySelector(".productsContainer");
-        noProductsAvailable.textContent = "No hay productos con tus criterios de búsqueda, profe";
+        noProductsAvailable.textContent = "No hay productos con tus criterios de búsqueda";
         
         divProducts.innerHTML = "";
         divProducts.appendChild(noProductsAvailable);
