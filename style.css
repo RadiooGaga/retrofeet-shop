@@ -207,7 +207,7 @@ input, select {
     width: 15%;
     height: 40px;
     padding: 5px;
-    background-color: var(--color-extra-grey);
+    background-color: var(--color-vanilla);
 }
 
 #products {
